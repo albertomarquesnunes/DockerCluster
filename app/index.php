@@ -13,7 +13,7 @@ header('Content-Type: text/html; charset=iso-8859-1');
 
 echo 'Versao Atual do PHP: ' . phpversion() . '<br>';
 
-$servername = "54.234.153.24";
+$servername = "192.168.0.170";
 $username = "root";
 $password = "Senha123";
 $database = "meubanco";
@@ -38,7 +38,7 @@ $query = "INSERT INTO dados (AlunoID, Nome, Sobrenome, Endereco, Cidade, Host) V
 
 
 if ($link->query($query) === TRUE) {
-  echo "New record created successfully";
+  echo "New record created successfully----> ".$host_name;
 } else {
   echo "Error: " . $link->error;
 }
